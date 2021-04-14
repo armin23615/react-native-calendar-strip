@@ -322,7 +322,7 @@ class CalendarStrip extends Component {
   // Set the selected date.  To clear the currently selected date, pass in 0.
   setSelectedDate = date => {
     let mDate = moment(date);
-    this.onDateSelected(mDate);
+    this.setState({selectedDate: mDate})
     if (this.props.scrollToOnSetSelectedDate) {
       // Scroll to selected date, centered in the week
       const scrolledDate = moment(mDate);
